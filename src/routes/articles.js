@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
 })
 
 // Create article
-router.post('/', async (req, res) => {
+router.post('/articles', async (req, res) => {
   const { headline, subheading, image, altTextImg, content, author } = req.body
   try {
     const newArticle = await prisma.article.create({
